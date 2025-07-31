@@ -94,7 +94,7 @@ Created categorical ranges (bins) for these numerical features to facilitate gro
 4. Data Analysis
 This section delves into understanding the relationships between different features and the TARGET variable.
 
-Univariate Analysis (Categorical Variables):
+**Univariate Analysis (Categorical Variables):**
 
 Iterated through all object-type variables.
 
@@ -108,45 +108,58 @@ Examined the distribution of key numerical variables using kdeplot.
 
 Separated data into 'defaulters' and 'repayers' to analyze their unique correlation patterns.
 
+**Bivariate Analysis:**
+
+Calculated and unstacked correlation matrices for both defaulters and repayers to find highly correlated variable pairs.
+
+Used kdeplot to compare the distributions of numerical variables for defaulters vs. non-defaulters (e.g., AMT_CREDIT vs. TARGET).
+
+Used pairplot for a holistic view of relationships among key amount variables.
+
+**Data Merging:**
+
+Merged _application_data_ and _previous_application_ DataFrames on _SK_ID_CURR_ to combine information for a more comprehensive analysis.
+
+Analyzed the relationship between NAME_CASH_LOAN_PURPOSE, NAME_CONTRACT_STATUS, and TARGET in the merged dataset.
 
 # Key Insights & Conclusions
 Based on the analysis, here are the primary insights and recommendations for the bank:
 
 Target Customer Segments (Safer to Lend To):
-Contract Type: Customers who have taken Cash Loans are less likely to default.
+**Contract Type:** Customers who have taken Cash Loans are less likely to default.
 
-Gender: Female customers show a lower default rate (~7%) compared to males.
+**Gender:** Female customers show a lower default rate (~7%) compared to males.
 
-Accompaniment: Unaccompanied individuals have a reasonable default rate (~8.5%).
+**Accompaniment:** Unaccompanied individuals have a reasonable default rate (~8.5%).
 
-Income Type: Working individuals, Commercial Associates, and Pensioners are safer segments.
+**Income Type:** Working individuals, Commercial Associates, and Pensioners are safer segments.
 
-Education: Customers with Higher Education have a significantly lower default rate (less than 5%).
+**Education**: Customers with Higher Education have a significantly lower default rate (less than 5%).
 
-Family Status: Married individuals are a safer target (default rate ~8%).
+**Family Status:** Married individuals are a safer target (default rate ~8%).
 
-Housing: People owning a house/apartment are generally safer (~8% default rate).
+**Housing:** People owning a house/apartment are generally safer (~8% default rate).
 
-Occupation: Accountants, Core Staff, Managers, and Laborers are safer to target (default rate 
+**Occupation:** Accountants, Core Staff, Managers, and Laborers are safer to target (default rate 
 le 7.5% to 10%).
 
-Organization Type: "Others," "Business Entity Type 3," and "Self Employed" organizations are good to target (default rate around 10%).
+**Organization Type:** "Others," "Business Entity Type 3," and "Self Employed" organizations are good to target (default rate around 10%).
 
 # Amount Segments (Recommended):
-Credit Amount: The credit amount should ideally not be more than $1,000,000.
+**Credit Amount**: The credit amount should ideally not be more than $1,000,000.
 
-Annuity: Annuity payments can be set around $50,000 (depending on the eligibility).
+**Annuity:** Annuity payments can be set around $50,000 (depending on the eligibility).
 
-Income Bracket: Customers with an income bracket below $1,000,000 are generally safer.
+**Income Bracket:** Customers with an income bracket below $1,000,000 are generally safer.
 
-Previous Application Behavior: 80-90% of customers whose previous applications were canceled or refused are repayers in the current data. The bank can consider analyzing and potentially targeting these segments with caution.
+**Previous Application Behavior:** 80-90% of customers whose previous applications were canceled or refused are repayers in the current data. The bank can consider analyzing and potentially targeting these segments with caution.
 
-Precautions (Segments to Avoid or Approach with Caution):
+**Precautions (Segments to Avoid or Approach with Caution):**
 Organization Type: Loans to individuals from "Transport Type 3" organizations should be avoided.
 
-Occupation: Low-Skill Laborers and Drivers tend to be higher defaulters and should be avoided.
+**Occupation:** Low-Skill Laborers and Drivers tend to be higher defaulters and should be avoided.
 
-Previous Application Behavior: Offers that were previously unused by high-income customers show a higher number of defaulters in the current data; this segment should be avoided.
+**Previous Application Behavior**: Offers that were previously unused by high-income customers show a higher number of defaulters in the current data; this segment should be avoided.
 
 # Tools and Libraries
 Python: The core programming language for the project.
