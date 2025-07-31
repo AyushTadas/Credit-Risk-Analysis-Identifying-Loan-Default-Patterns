@@ -1,22 +1,22 @@
 # Credit-Risk-Analysis-Identifying-Loan-Default-Patterns
 A data-driven project focused on predicting loan default risk by analyzing customer application and previous loan data. It employs comprehensive data preprocessing and exploratory data analysis in Python to uncover critical borrower characteristics and provide actionable insights for financial institutions to reduce losses.
 
-Project Overview
+# Project Overview
 This project focuses on analyzing customer application data and their previous loan application history to identify patterns associated with loan default. The goal is to help financial institutions, like banks, make more informed decisions when approving loans, thereby reducing financial risk.
 
 Source- https://www.kaggle.com/datasets/gauravduttakiit/loan-defaulter/data?select=previous_application.csv
 
-Problem Statement
+# Problem Statement
 A significant challenge for lending institutions is managing the risk of loan defaults. By understanding the characteristics of customers who are likely to default, banks can optimize their loan approval processes, minimize losses, and ensure sustainable growth. This project aims to provide actionable insights to achieve this.
 
-Datasets
+# Datasets
 The analysis utilizes two primary datasets:
 
 application_data.csv: Contains information about the current loan applications, including demographic details, income, credit amount, and the TARGET variable (0 for non-defaulter, 1 for defaulter).
 
 previous_application.csv: Provides historical data on past loan applications made by the customers.
 
-Methodology
+# Methodology
 The project follows a structured data analysis pipeline:
 
 1. Data Import and Initial Exploration
