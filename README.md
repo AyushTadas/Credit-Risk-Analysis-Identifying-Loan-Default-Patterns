@@ -33,7 +33,7 @@ app.isnull() first creates a boolean DataFrame.
 2. Feature Selection
 This phase focuses on reducing dimensionality and cleaning the datasets by handling missing values and irrelevant features.
 
-Missing Value Analysis:
+# Missing Value Analysis:
 
 Calculated the percentage of missing values for each column.
 
@@ -59,7 +59,7 @@ EXT_SOURCE_2 and EXT_SOURCE_3 were dropped due to their high correlation with ea
 3. Feature Engineering
 This step involves handling remaining missing values and transforming existing features to make them more suitable for analysis.
 
-Missing Value Imputation:
+# Missing Value Imputation:
 
 CNT_FAM_MEMBERS: Imputed with the mode (most frequent value).
 
@@ -102,27 +102,14 @@ Used countplot to visualize the distribution of each category against the TARGET
 
 Calculated and visualized the default percentage for each category to identify high-risk and low-risk segments.
 
-Univariate Analysis (Numerical Variables):
+**Univariate Analysis (Numerical Variables):**
 
 Examined the distribution of key numerical variables using kdeplot.
 
 Separated data into 'defaulters' and 'repayers' to analyze their unique correlation patterns.
 
-Bivariate Analysis:
 
-Calculated and unstacked correlation matrices for both defaulters and repayers to find highly correlated variable pairs.
-
-Used kdeplot to compare the distributions of numerical variables for defaulters vs. non-defaulters (e.g., AMT_CREDIT vs. TARGET).
-
-Used pairplot for a holistic view of relationships among key amount variables.
-
-Data Merging:
-
-Merged application_data and previous_application DataFrames on SK_ID_CURR to combine information for a more comprehensive analysis.
-
-Analyzed the relationship between NAME_CASH_LOAN_PURPOSE, NAME_CONTRACT_STATUS, and TARGET in the merged dataset.
-
-Key Insights & Conclusions
+# Key Insights & Conclusions
 Based on the analysis, here are the primary insights and recommendations for the bank:
 
 Target Customer Segments (Safer to Lend To):
@@ -145,7 +132,7 @@ le 7.5% to 10%).
 
 Organization Type: "Others," "Business Entity Type 3," and "Self Employed" organizations are good to target (default rate around 10%).
 
-Amount Segments (Recommended):
+# Amount Segments (Recommended):
 Credit Amount: The credit amount should ideally not be more than $1,000,000.
 
 Annuity: Annuity payments can be set around $50,000 (depending on the eligibility).
@@ -161,7 +148,7 @@ Occupation: Low-Skill Laborers and Drivers tend to be higher defaulters and shou
 
 Previous Application Behavior: Offers that were previously unused by high-income customers show a higher number of defaulters in the current data; this segment should be avoided.
 
-Tools and Libraries
+# Tools and Libraries
 Python: The core programming language for the project.
 
 Pandas: For data manipulation and analysis.
